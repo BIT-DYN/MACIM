@@ -228,4 +228,4 @@ dependencies:
     - werkzeug==2.0.1
     - widgetsnbextension==3.5.1
     - xxhash==2.0.2
-prefix: /home/dyn/anaconda3/envs/mocim
+prefix: /home/dyn/anaconda3/envs/macim
