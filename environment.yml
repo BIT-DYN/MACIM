@@ -1,4 +1,4 @@
-name: mocim
+name: macim
 channels:
   - http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch
   - http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
