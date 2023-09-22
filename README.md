@@ -1,16 +1,19 @@
-# MOCIM
-MOCIM: Multi-Robot Online Collaborative Implicit Mapping Through Distributed Optimization
+# MACIM
+MACIM: Multi-Agent Collaborative Implicit Mapping Through Distributed Optimizationn
 
  ## Abstract
-Constructing high-quality dense maps in real-time serves as a crucial cornerstone for enabling robots to effectively perform downstream tasks. Recently, there has been growing interest in using neural networks as maps to represent functions that implicitly define the geometric or optical features of a scene. However, existing implicit mapping algorithms are constrained to single-robot scenarios, restricting both perceptual range and exploration efficiency. In this paper, we present MOCIM, a multi-robot online collaborative implicit mapping algorithm to construct an implicit Euclidean Signed Distance Field (ESDF), formulated as a distributed optimization task.   In our formulation, Each robot independently maintains its own local data and neural network. At each iteration, robots train networks using local data and network parameters from their peers. Subsequently, they transmit the latest version of network parameters to their neighbors, thus keeping the local network parameters of all robots continuously consistent.  When optimizing the network model, the robots use not raw but in-grid fused sensor data to prevent training data conflicts. In addition, we constrain the signed distance values of concealed regions by Small Batch Euclidean Distance Transform (SBEDT) to eliminate reconstruction artifacts.
+Collaborative mapping aids agents in achieving an efficient and comprehensive understanding of their environment. Recently, there has been growing interest in using neural networks as maps to represent functions that implicitly define the geometric features of a scene.
+However, existing implicit mapping algorithms are constrained to single-agent scenarios, thus restricting mapping efficiency. In this paper, we present MACIM, a multi-agent collaborative implicit mapping algorithm to construct an implicit Euclidean Signed Distance Field (ESDF), formulated as a distributed optimization task.  
+In our formulation, each agent independently maintains its own local data and neural network. At each iteration, agents train networks using local data and network parameters from their peers. Subsequently, they transmit the latest version of network parameters to their neighbors, thus keeping the local network parameters of all agents continuously consistent. 
+When optimizing the network model, the agents use not raw but in-grid fused sensor data to prevent training data conflicts. In addition, we constrain the signed distance values of unobserved regions by Small Batch Euclidean Distance Transform (SBEDT) to mitigate reconstruction artifacts. 
  
 <img src="https://github.com/BIT-DYN/MOCIM/blob/main/figs/poster.png">
 
 ## Install
 ```bash
-git clone https://github.com/BIT-DYN/MOCIM
+git clone https://github.com/BIT-DYN/MACIM
 conda env create -f environment.yml
-conda activate mocim
+conda activate macim
 ```
 
 ## Download Data
